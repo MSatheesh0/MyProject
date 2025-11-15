@@ -1,0 +1,34 @@
+/* COMPONENTS/BACKTOTOPBUTTON.MODULE.CSS */
+.backToTopButton {
+  position: fixed;
+  bottom: var(--space-4);
+  right: var(--space-4);
+  width: 50px;
+  height: 50px;
+  background: var(--color-gradient);
+  color: white;
+  border-radius: 50%;
+  border: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.2rem;
+  cursor: pointer;
+  box-shadow: 0 8px 24px var(--color-shadow);
+  transition: opacity 0.4s, transform 0.4s, box-shadow 0.4s;
+  opacity: 0;
+  transform: translateY(20px);
+  pointer-events: none;
+  z-index: 999;
+}
+
+.backToTopButton.visible {
+  opacity: 1;
+  transform: translateY(0);
+  pointer-events: auto;
+}
+
+.backToTopButton:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 32px var(--color-shadow);
+}

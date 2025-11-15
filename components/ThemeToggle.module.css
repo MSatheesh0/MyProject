@@ -1,0 +1,29 @@
+/* COMPONENTS/THEMETOGGLE.MODULE.CSS */
+.themeToggle {
+  background: transparent;
+  border: none;
+  color: var(--color-text-secondary);
+  font-size: 1.2rem;
+  cursor: pointer;
+  padding: var(--space-1);
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: var(--transition-medium);
+}
+
+.themeToggle:hover {
+  color: var(--color-text-primary);
+  background-color: var(--glass-border);
+}
+
+.themeToggle i {
+  transition: transform 0.4s ease;
+}
+
+.themeToggle:hover i {
+  transform: rotate(15deg);
+}

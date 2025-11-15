@@ -1,0 +1,89 @@
+/* COMPONENTS/HEADER.MODULE.CSS */
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: var(--space-2) 0;
+  z-index: 1000;
+  transition: transform 0.4s ease-in-out, top 0.4s ease-in-out;
+}
+
+.hidden {
+  transform: translateY(-100%);
+}
+
+.nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: var(--space-4);
+  max-width: 500px;
+  margin: 0 auto;
+  padding: var(--space-1) var(--space-3);
+  background: var(--glass-bg);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid var(--glass-border);
+  border-radius: 50px;
+  box-shadow: 0 8px 32px 0 var(--color-shadow);
+}
+
+.navLink {
+  color: var(--color-text-secondary);
+  font-family: var(--font-secondary);
+  font-weight: 600;
+  font-size: 0.9rem;
+  padding: var(--space-1) var(--space-2);
+  border-radius: 50px;
+  position: relative;
+  transition: var(--transition-medium);
+}
+
+.navLink:hover {
+  color: var(--color-text-primary);
+  background-color: var(--glass-border);
+}
+
+.navLink.active {
+  color: var(--color-text-primary);
+  background: var(--color-gradient);
+  color: white;
+}
+
+.chatbotButton {
+  background: transparent;
+  border: none;
+  color: var(--color-text-secondary);
+  font-size: 1.2rem;
+  cursor: pointer;
+  padding: var(--space-1);
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: var(--transition-medium);
+}
+.chatbotButton:hover {
+  color: var(--color-text-primary);
+  background-color: var(--glass-border);
+  transform: scale(1.1);
+}
+.chatbotButton svg {
+  width: 20px;
+  height: 20px;
+}
+
+@media (max-width: 768px) {
+  .nav {
+    max-width: calc(100% - 32px);
+    gap: var(--space-1);
+    padding: var(--space-1);
+  }
+  .navLink {
+    font-size: 0.8rem;
+    padding: var(--space-1) var(--space-1);
+  }
+}
